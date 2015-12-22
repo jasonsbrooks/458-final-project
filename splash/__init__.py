@@ -164,9 +164,9 @@ def writeExplanation(winnerObject, position, personData, adjusted_weights):
 
 	resultString += ' Based on your history of computers as well as your preferences, our engine determined that the most important feature for you in this new machine is ' + mostImportantParam + '. We took this into a lot of consideration so you do not have another bad experience.'
 
-	if personData['os'] == 'windows':
+	if personData['os'] == 'windows' and winnerObject[0].operating_system == 'windows':
 		resultString += ' The reason we did not recommend a Macbook Pro for you is becase of your preference for Windows.'
-	if personData['os'] == 'mac':
+	if personData['os'] == 'mac' and winnerObject[0].operating_system == 'mac':
 		resultString += ' The reason we did not recommend a Windows laptop for you is becase of your preference for Mac.'
 	return resultString
 
