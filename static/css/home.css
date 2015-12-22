@@ -1,99 +1,106 @@
-@import "//fonts.googleapis.com/css?family=Lato";
-*, *:before, *:after {
-  box-sizing: border-box;
-}
+/* Main Setup */
 
 body {
-  background: #ddd;
   margin: 0;
-  overflow-x: hidden;
-  font-family: 'Lato', sans-serif;
+  font: 400 1.25em/1.5 "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #34495e;
+  color: white;
+  text-align: center;
 }
 
-/* Preloader */
-
-div#preloader {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-  background: #333 url('../images/loading.gif') no-repeat center center;
+/* Header */
+#header {
+  padding-top: 45px;
 }
 
-/* Questionnaire */
-
-#q-cont {
-  width: 400%;
-  height: 300px;
-  position: absolute;
-  top: 50%;
-  left: 0px;
-  -webkit-transform: translateY(-150px);
-          transform: translateY(-150px);
-  -webkit-transition: 0.5s 500ms;
-  transition: 0.5s 500ms;
+#title-main-text {
+  font-size: 45px;
+  font-weight: 600;
 }
 
-.slide {
-  height: 100%;
-  width: 25%;
+#title-sub-text {
+  font-size: 25px;
+  padding: 10px;
+}
+
+#title-img {
+  width: 300px;
   padding: 30px;
+}
+
+/* Form Stuff */
+
+#comp-form p {
+  padding-bottom: 10px;
+}
+
+.question-subtext {
+  font-size: 14px;
+  /*padding: 5px;*/
+}
+
+.checkboxexample label, .gfield_radio li label {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 100;
+  padding: 15px 50px;
+  -moz-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+ul {
+  padding: 0;
+}
+
+.checkboxexample, .gfield_radio li {
   display: inline-block;
-  vertical-align: top;
-  border-left: solid 30px #ddd;
-  border-right: solid 30px #ddd;
+  margin-right: 1%;
+  padding-bottom: 12px;
 }
 
-.question {
-  width: 100%;
-  font-size: 2em;
+.checkboxexample label, .gfield_radio li label {
+  width: 200px;
+  border: 1px #333 solid;
+  color: #333;
+  background: #fff;
   text-align: center;
-  margin-bottom: 10px;
+  display: block;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 300;
 }
 
-.question:before {
-  content: "Q. ";
-}
-
-.options {
-  width: 350px;
-  margin: 0 auto;
-}
-
-.op, .re {
-  margin-top: 20px;
-  display: inline-block;
-  line-height: 3em;
-  text-align: center;
-  background: #d90;
-  border-radius: 20px;
-  color: #fff;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+.checkboxexample label:hover, .gfield_radio li label:hover {
+  border-color: #333;
+  color: #333;
   cursor: pointer;
 }
 
-.op {
-  width: 45%;
+.checkboxexample label:active, .gfield_radio li label:active {
+  border-color: #333;
+  color: #333;
 }
 
-.re {
-  font-size: 0.5em;
-  width: 200px;
-  display: block;
-  margin: 10px auto;
+.checkboxexample input[type="checkbox"], .gfield_radio li input[type="checkbox"] {
+  display: none;
 }
 
-.op2 {
-  float: right;
+.checkboxexample input[type="checkbox"]:checked + label, .gfield_radio li input[type="checkbox"]:checked + label {
+  background: #333;
+  color: #fff;
+  border-color: #333;
 }
 
-#slide4 {
-  text-align: center;
-  padding-top: 30px;
-  font-size: 3em;
+.checkboxexample input[type="radio"], .gfield_radio li input[type="radio"] {
+  display: none;
+}
+
+.checkboxexample input[type="radio"]:checked ~ label, .gfield_radio li input[type="radio"]:checked ~ label {
+  background: #333;
+  color: #fff;
+  border-color: #333;
 }
 
