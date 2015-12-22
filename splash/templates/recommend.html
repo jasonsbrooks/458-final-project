@@ -5,6 +5,7 @@
 	<script type="text/javascript" src="static/javascript/home.js"></script>
 	<!-- <link rel="stylesheet" type="text/css" href="static/css/reset.css" /> -->
 	<link rel="stylesheet" type="text/css" href="static/css/home.css" />
+	<link rel="stylesheet" type="text/css" href="static/css/recommendations.css" />
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,800' rel='stylesheet' type='text/css'>
 	<link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800" rel="stylesheet" type="text/css">
@@ -15,7 +16,71 @@
 <body>
 <div id="header">
 	<p id="title-main-text">Recommendations</p>
-	<img id="title-img" src="/static/images/desktop-pc-vector.png">
+	<table align="center" style="width:60%; color: white;">
+	  <tr class="results-row">
+	    <td class="place-cell">Winner</td>
+		<td class="img-cell"><img class="rcmd-img" src="/static/images/desktop-pc-vector.png"></td>
+	    <td class="score-cell">Normalized Match Score: {{ results[0][1] }}</td> 
+	    <td>
+	    	<ul>
+	    		<li style="font-size: 20px;">Model: {{ results[0][0]['model'] }}</li>
+	    		<li>Price: {{ results[0][0]['price'] }}</li>
+	    		<li>CPU: {{ results[0][0]['cpu'] }}</li>
+	    		<li>Graphics: {{ results[0][0]['graphics'] }}</li>
+	    		<li>RAM: {{ results[0][0]['ram'] }}</li>
+	    		<li>Drive: {{ results[0][0]['drive'] }}</li>
+	    		<li>Display: {{ results[0][0]['display'] }}</li>
+	    		<li>Battery: {{ results[0][0]['battery'] }}</li>
+	    		<li>Quality: {{ results[0][0]['quality'] }}</li>
+	    		<li>Weight: {{ results[0][0]['weight'] }}</li>
+	    		<li>Thickness: {{ results[0][0]['thickness'] }}</li>
+	    	</ul>
+	    </td>
+	  </tr>
+	  <tr><td colspan="4"><p class="explanation-text"><b>Explanation:</b> {{ results[0][2] }}</p></td></tr>
+	  <tr class="results-row">
+	    <td class="place-cell">Runner Up</td>
+		<td class="img-cell"><img class="rcmd-img" src="/static/images/desktop-pc-vector.png"></td>
+	    <td class="score-cell">Normalized Match Score: {{ results[1][1] }}</td> 
+	    <td>
+	    	<ul>
+	    		<li style="font-size: 20px;">Model: {{ results[1][0]['model'] }}</li>
+	    		<li>Price: {{ results[1][0]['price'] }}</li>
+	    		<li>CPU: {{ results[1][0]['cpu'] }}</li>
+	    		<li>Graphics: {{ results[1][0]['graphics'] }}</li>
+	    		<li>RAM: {{ results[1][0]['ram'] }}</li>
+	    		<li>Drive: {{ results[1][0]['drive'] }}</li>
+	    		<li>Display: {{ results[1][0]['display'] }}</li>
+	    		<li>Battery: {{ results[1][0]['battery'] }}</li>
+	    		<li>Quality: {{ results[1][0]['quality'] }}</li>
+	    		<li>Weight: {{ results[1][0]['weight'] }}</li>
+	    		<li>Thickness: {{ results[1][0]['thickness'] }}</li>
+	    	</ul>
+	    </td>
+	  </tr>
+	  <tr><td colspan="4"><p class="explanation-text"><b>Explanation:</b> {{ results[1][2] }}</p></td></tr>
+	  <tr class="results-row">
+	    <td class="place-cell">Runner Up</td>
+		<td class="img-cell"><img class="rcmd-img" src="/static/images/desktop-pc-vector.png"></td>
+	    <td class="score-cell">Normalized Match Score: {{ results[2][1] }}</td> 
+	    <td>
+	    	<ul>
+	    		<li style="font-size: 20px;">Model: {{ results[2][0]['model'] }}</li>
+	    		<li>Price: {{ results[2][0]['price'] }}</li>
+	    		<li>CPU: {{ results[2][0]['cpu'] }}</li>
+	    		<li>Graphics: {{ results[2][0]['graphics'] }}</li>
+	    		<li>RAM: {{ results[2][0]['ram'] }}</li>
+	    		<li>Drive: {{ results[2][0]['drive'] }}</li>
+	    		<li>Display: {{ results[2][0]['display'] }}</li>
+	    		<li>Battery: {{ results[2][0]['battery'] }}</li>
+	    		<li>Quality: {{ results[2][0]['quality'] }}</li>
+	    		<li>Weight: {{ results[2][0]['weight'] }}</li>
+	    		<li>Thickness: {{ results[2][0]['thickness'] }}</li>
+	    	</ul>
+	    </td>
+	  </tr>
+	  <tr><td colspan="4"><p class="explanation-text"><b>Explanation:</b> {{ results[2][2] }}</p></td></tr>
+	</table>
 </div>
 
 </div>

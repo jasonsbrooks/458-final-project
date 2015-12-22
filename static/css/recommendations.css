@@ -1,0 +1,32 @@
+.rcmd-img {
+	width: 150px;
+}
+
+tr.results-row > td {
+	padding-bottom: 75px;
+	text-align: center;
+}
+
+.place-cell {
+	width: 150px;
+	color: white;
+	font-weight: 600;
+}
+
+.img-cell {
+	width: 175px;
+}
+
+.score-cell {
+	width: 300px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.explanation-text {
+	padding-bottom: 55px;
+	text-align: center;
+	border-bottom: 1px solid white !important;
+}

@@ -22,6 +22,7 @@ def recommend():
 	prior_disliked = request.form.getlist('prior-disliked')
 	user_data = {'os': os, 'battery': battery, 'harddrive': harddrive, 'budget': budget, 'memory': memory, 'size': size, 'prior_liked': prior_liked, 'prior_disliked': prior_disliked}
 	results = whichpc(user_data)
-	return render_template('recommend.html')
+	print results
+	return render_template('recommend.html', results=results)
 
 
