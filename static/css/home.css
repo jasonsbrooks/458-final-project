@@ -5,13 +5,13 @@ body {
   font: 400 1.25em/1.5 "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   background-color: #34495e;
-  color: white;
   text-align: center;
 }
 
 /* Header */
 #header {
   padding-top: 45px;
+  color: white;
 }
 
 #title-main-text {
@@ -33,6 +33,7 @@ body {
 
 #comp-form p {
   padding-bottom: 10px;
+  color: white;
 }
 
 .question-subtext {
@@ -103,4 +104,68 @@ ul {
   color: #fff;
   border-color: #333;
 }
+
+button {
+  display: inline-block;
+  -webkit-appearance: none;
+  padding: 1em 1.3em;
+  margin: 0 10px;
+  font: 700 18px/1 "Open Sans", sans-serif;
+  letter-spacing: 1px;
+  border: none;
+  color: white;
+  position: relative;
+}
+
+button:not(.facebook) {
+  background-color: #4783c4;
+  box-shadow: 0px 6px #28517d;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+button:not(.facebook).blue {
+  background-color: #4783c4;
+  box-shadow: 0px 6px #28517d;
+}
+
+button:not(.facebook).green {
+  background-color: #4ed198;
+  box-shadow: 0px 6px #269364;
+}
+
+button:not(.facebook).green.disabled {
+  background-color: transparent;
+  border: 1px solid #4ed198;
+  color: #4ed198;
+}
+
+button:not(.facebook).red {
+  background-color: #ea6060;
+  box-shadow: 0px 6px #c91b1b;
+}
+
+button:not(.facebook).red.disabled {
+  background-color: transparent;
+  border: 1px solid #ea6060;
+  color: #ea6060;
+}
+
+button:not(.facebook):active, button:not(.facebook).pressed, .game.voted button:not(.facebook) {
+  top: 6px;
+  box-shadow: none;
+}
+
+button.form-button {
+  padding: 0;
+}
+
+#submit-button-area {
+  padding: 80px;
+}
+
+.select2-selection__choice {
+  font: 400 15px "Open Sans", sans-serif;
+}
+
 

@@ -3,11 +3,13 @@
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="http://malsup.github.com/jquery.form.js"></script>
 	<script type="text/javascript" src="static/javascript/home.js"></script>
-	<link rel="stylesheet" type="text/css" href="static/css/reset.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="static/css/reset.css" /> -->
 	<link rel="stylesheet" type="text/css" href="static/css/home.css" />
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,800' rel='stylesheet' type='text/css'>
 	<link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800" rel="stylesheet" type="text/css">
+	<link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css" rel="stylesheet" />
+	<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>
 	<title>CPSC 458 | Final Project | Jason Brooks</title>
 </head>
 <body>
@@ -17,7 +19,7 @@
 	<img id="title-img" src="/static/images/desktop-pc-vector.png">
 </div>
 <div id="survey">
-	<form id="comp-form" action="/computer-choices">
+	<form id="comp-form" action="/recommend" method="POST">
 		<p>Q1: What is your budget for the computer?</p>
 		<ul class="gfield_radio" id="input_1_budget">
 			<li class="gchoice_budget_0">
@@ -148,7 +150,168 @@
 
 		<p>Q7: Which computer models have you owned in the past?</p>
 		<p class="question-subtext">Knowing what you've had in the past will help us find the next best machine for you to purchase.</p>
-
+		<select name="prior" id="existing-machines" multiple style="width: 600px;">
+			<option value="Asus F554LA">Asus F554LA</option>
+			<option value="Dell Inspiron 15-i3543">Dell Inspiron 15-i3543</option>
+			<option value="Acer Aspire E5-571-588M">Acer Aspire E5-571-588M</option>
+			<option value="Acer Aspire E5-573G">Acer Aspire E5-573G</option>
+			<option value="Acer Aspire E5-573">Acer Aspire E5-573</option>
+			<option value="ASUS X555UB">ASUS X555UB</option>
+			<option value="Asus K501LX">Asus K501LX</option>
+			<option value="Asus N56JN (Refurb)">Asus N56JN (Refurb)</option>
+			<option value="Lenovo Y40-80">Lenovo Y40-80</option>
+			<option value="Asus K501UX">Asus K501UX</option>
+			<option value="Dell Inspiron 15-i7559">Dell Inspiron 15-i7559</option>
+			<option value="Acer Aspire V15 Nitro">Acer Aspire V15 Nitro</option>
+			<option value="ASUS ROG GL551JW-DS71">ASUS ROG GL551JW-DS71</option>
+			<option value="ASUS N550JK-DS71T">ASUS N550JK-DS71T</option>
+			<option value="MSI GE72 Apache-264">MSI GE72 Apache-264</option>
+			<option value="MSI GE62 Apache-276">MSI GE62 Apache-276</option>
+			<option value="Lenovo Y700 14">Lenovo Y700 14</option>
+			<option value="ASUS ROG GL552VW-DH71">ASUS ROG GL552VW-DH71</option>
+			<option value="ASUS N550JX">ASUS N550JX</option>
+			<option value="Acer Aspire V17 Nitro">Acer Aspire V17 Nitro</option>
+			<option value="ASUS ROG G750JZ (Refurbished)">ASUS ROG G750JZ (Refurbished)</option>
+			<option value="ASUS ROG G752VL-DH71">ASUS ROG G752VL-DH71</option>
+			<option value="MSI GE62 Apache Pro-004">MSI GE62 Apache Pro-004</option>
+			<option value="Alienware 15">Alienware 15</option>
+			<option value="Gigabyte P55W">Gigabyte P55W</option>
+			<option value="Lenovo Y50 4K">Lenovo Y50 4K</option>
+			<option value="MSI GE72 Apache Pro-242">MSI GE72 Apache Pro-242</option>
+			<option value="Eluktro PRO15SE">Eluktro PRO15SE</option>
+			<option value="ASUS ROG G752VL-DH71">ASUS ROG G752VL-DH71</option>
+			<option value="ASUS ROG G751JT-CH71">ASUS ROG G751JT-CH71</option>
+			<option value="Alienware 15">Alienware 15</option>
+			<option value="Alienware 17">Alienware 17</option>
+			<option value="MSI GS60 Ghost Pro-607">MSI GS60 Ghost Pro-607</option>
+			<option value="MSI GE62 Apache Pro-001">MSI GE62 Apache Pro-001</option>
+			<option value="MSI GE72 Apache Pro-001">MSI GE72 Apache Pro-001</option>
+			<option value="Gigabyte P34Wv4">Gigabyte P34Wv4</option>
+			<option value="ASUS ROG G751JY-WH71">ASUS ROG G751JY-WH71</option>
+			<option value="Gigabyte P35Xv4">Gigabyte P35Xv4</option>
+			<option value="ASUS ROG G752VT-DH72">ASUS ROG G752VT-DH72</option>
+			<option value="MSI GS60 Ghost Pro-002">MSI GS60 Ghost Pro-002</option>
+			<option value="MSI GT72 Dominator Pro G-1666">MSI GT72 Dominator Pro G-1666</option>
+			<option value="MSI GS60 Ghost Pro 4K-053">MSI GS60 Ghost Pro 4K-053</option>
+			<option value="Alienware 17 4K">Alienware 17 4K</option>
+			<option value="MSI GT80 Titan">MSI GT80 Titan</option>
+			<option value="MSI GT80 Titan">MSI GT80 Titan</option>
+			<option value="Asus X205TA">Asus X205TA</option>
+			<option value="HP Stream 11">HP Stream 11</option>
+			<option value="Acer Aspire ES1-111">Acer Aspire ES1-111</option>
+			<option value="HP Stream 13">HP Stream 13</option>
+			<option value="ASUS Flip TP300LA">ASUS Flip TP300LA</option>
+			<option value="Lenovo ThinkPad X140e">Lenovo ThinkPad X140e</option>
+			<option value="Microsoft Surface 3">Microsoft Surface 3</option>
+			<option value="Dell XPS 11">Dell XPS 11</option>
+			<option value="HP Pavilion x360 13">HP Pavilion x360 13</option>
+			<option value="Asus Zenbook UX305FA">Asus Zenbook UX305FA</option>
+			<option value="Acer Aspire V3-372T">Acer Aspire V3-372T</option>
+			<option value="Lenovo Yoga 3 11">Lenovo Yoga 3 11</option>
+			<option value="Asus Zenbook UX305LA">Asus Zenbook UX305LA</option>
+			<option value="ASUS Flip TP300LA">ASUS Flip TP300LA</option>
+			<option value="Dell XPS 13-9343 (i3)">Dell XPS 13-9343 (i3)</option>
+			<option value="ASUS Zenbook UX303LA">ASUS Zenbook UX303LA</option>
+			<option value="Apple Macbook Air 11">Apple Macbook Air 11</option>
+			<option value="Dell XPS 13-9343">Dell XPS 13-9343</option>
+			<option value="ASUS Zenbook UX303LA">ASUS Zenbook UX303LA</option>
+			<option value="Microsoft Surface Pro 3">Microsoft Surface Pro 3</option>
+			<option value="Apple Macbook Air 13">Apple Macbook Air 13</option>
+			<option value="Apple Macbook Air 13">Apple Macbook Air 13</option>
+			<option value="Dell XPS 13 9350">Dell XPS 13 9350</option>
+			<option value="Lenovo ThinkPad X250 *">Lenovo ThinkPad X250 *</option>
+			<option value="HP Spectre x360">HP Spectre x360</option>
+			<option value="ASUS Zenbook UX303LB">ASUS Zenbook UX303LB</option>
+			<option value="Apple Macbook Pro Retina 13">Apple Macbook Pro Retina 13</option>
+			<option value="ASUS T100TA">ASUS T100TA</option>
+			<option value="HP Stream 11 x360">HP Stream 11 x360</option>
+			<option value="Asus T100HA">Asus T100HA</option>
+			<option value="Dell Inspiron 11 2 in 1">Dell Inspiron 11 2 in 1</option>
+			<option value="Acer Aspire Switch 11">Acer Aspire Switch 11</option>
+			<option value="ASUS Flip TP300LA">ASUS Flip TP300LA</option>
+			<option value="Dell Inspiron 11 2 in 1">Dell Inspiron 11 2 in 1</option>
+			<option value="Lenovo Yoga 2 11">Lenovo Yoga 2 11</option>
+			<option value="ASUS Q502LA (Refurb)">ASUS Q502LA (Refurb)</option>
+			<option value="Microsoft Surface 3">Microsoft Surface 3</option>
+			<option value="Asus T300CHI">Asus T300CHI</option>
+			<option value="HP Pavilion x360 13">HP Pavilion x360 13</option>
+			<option value="ASUS Flip TP300LA">ASUS Flip TP300LA</option>
+			<option value="Acer Aspire R 13">Acer Aspire R 13</option>
+			<option value="Dell Inspiron 13 2 in 1">Dell Inspiron 13 2 in 1</option>
+			<option value="ASUS Q502LA">ASUS Q502LA</option>
+			<option value="Microsoft Surface Pro 3">Microsoft Surface Pro 3</option>
+			<option value="Lenovo Yoga 700 14">Lenovo Yoga 700 14</option>
+			<option value="Lenovo ThinkPad Yoga 15">Lenovo ThinkPad Yoga 15</option>
+			<option value="Lenovo Yoga 2 Pro">Lenovo Yoga 2 Pro</option>
+			<option value="Lenovo ThinkPad Yoga">Lenovo ThinkPad Yoga</option>
+			<option value="HP Spectre x360">HP Spectre x360</option>
+			<option value="Lenovo ThinkPad Yoga 15">Lenovo ThinkPad Yoga 15</option>
+			<option value="Lenovo Yoga 3 Pro - 80HE000VUS">Lenovo Yoga 3 Pro - 80HE000VUS</option>
+			<option value="Microsoft Surface Pro 3">Microsoft Surface Pro 3</option>
+			<option value="Lenovo ThinkPad Yoga (2nd Gen) *">Lenovo ThinkPad Yoga (2nd Gen) *</option>
+			<option value="Lenovo Yoga 3 Pro - 80HE000LUS">Lenovo Yoga 3 Pro - 80HE000LUS</option>
+			<option value="Microsoft Surface Pro 3">Microsoft Surface Pro 3</option>
+			<option value="Lenovo ThinkPad X140e">Lenovo ThinkPad X140e</option>
+			<option value="Lenovo ThinkPad T440">Lenovo ThinkPad T440</option>
+			<option value="Lenovo ThinkPad E540">Lenovo ThinkPad E540</option>
+			<option value="Lenovo ThinkPad T440p">Lenovo ThinkPad T440p</option>
+			<option value="Lenovo ThinkPad E440">Lenovo ThinkPad E440</option>
+			<option value="Asus Zenbook UX305LA">Asus Zenbook UX305LA</option>
+			<option value="Dell XPS 13-9343">Dell XPS 13-9343</option>
+			<option value="Lenovo ThinkPad X250">Lenovo ThinkPad X250</option>
+			<option value="Dell XPS 13 9343">Dell XPS 13 9343</option>
+			<option value="Apple Macbook Air 13">Apple Macbook Air 13</option>
+			<option value="Dell XPS 13 9350">Dell XPS 13 9350</option>
+			<option value="Apple Macbook Air 13">Apple Macbook Air 13</option>
+			<option value="Lenovo ThinkPad T450s *">Lenovo ThinkPad T450s *</option>
+			<option value="Lenovo ThinkPad T550 *">Lenovo ThinkPad T550 *</option>
+			<option value="Lenovo ThinkPad T540p">Lenovo ThinkPad T540p</option>
+			<option value="Dell Latitude 15 E5550 *">Dell Latitude 15 E5550 *</option>
+			<option value="Dell XPS 15-9530 (Refurb">Dell XPS 15-9530 (Refurb</option>
+			<option value="ASUS Zenbook UX303LN">ASUS Zenbook UX303LN</option>
+			<option value="Lenovo ThinkPad T440p *">Lenovo ThinkPad T440p *</option>
+			<option value="Dell Latitude 14 E7450 *">Dell Latitude 14 E7450 *</option>
+			<option value="Dell XPS 13 9343">Dell XPS 13 9343</option>
+			<option value="Apple Macbook Pro Retina 13">Apple Macbook Pro Retina 13</option>
+			<option value="ASUS Zenbook UX301LA">ASUS Zenbook UX301LA</option>
+			<option value="Dell XPS 15-9550">Dell XPS 15-9550</option>
+			<option value="Apple Macbook Pro Retina 15">Apple Macbook Pro Retina 15</option>
+			<option value="ASUS X551MAV">ASUS X551MAV</option>
+			<option value="Asus F554LA">Asus F554LA</option>
+			<option value="Dell Inspiron 15-i3543">Dell Inspiron 15-i3543</option>
+			<option value="Acer Aspire E5-573G">Acer Aspire E5-573G</option>
+			<option value="Acer Aspire E5-573">Acer Aspire E5-573</option>
+			<option value="ASUS Q502LA (Refurb)">ASUS Q502LA (Refurb)</option>
+			<option value="Lenovo Flex 2 15">Lenovo Flex 2 15</option>
+			<option value="Dell Inspiron 15-i5558">Dell Inspiron 15-i5558</option>
+			<option value="HP Pavilion x360 13">HP Pavilion x360 13</option>
+			<option value="Lenovo Z41-70">Lenovo Z41-70</option>
+			<option value="Lenovo U31">Lenovo U31</option>
+			<option value="Lenovo Z51">Lenovo Z51</option>
+			<option value="Asus Zenbook UX305FA">Asus Zenbook UX305FA</option>
+			<option value="Dell Inspiron 13 2 in 1">Dell Inspiron 13 2 in 1</option>
+			<option value="Asus Zenbook UX305LA">Asus Zenbook UX305LA</option>
+			<option value="Dell Inspiron 15-i7559">Dell Inspiron 15-i7559</option>
+			<option value="ASUS Q502LA">ASUS Q502LA</option>
+			<option value="Dell XPS 13-9343">Dell XPS 13-9343</option>
+			<option value="ASUS N550JK">ASUS N550JK</option>
+			<option value="ASUS Zenbook UX303LA">ASUS Zenbook UX303LA</option>
+			<option value="Dell XPS 13 9343">Dell XPS 13 9343</option>
+			<option value="Apple Macbook Air 13">Apple Macbook Air 13</option>
+			<option value="ASUS N550JX">ASUS N550JX</option>
+			<option value="ASUS Zenbook UX303LA">ASUS Zenbook UX303LA</option>
+			<option value="Apple Macbook Air 13">Apple Macbook Air 13</option>
+			<option value="Dell XPS 13 9350">Dell XPS 13 9350</option>
+			<option value="ASUS Zenbook UX303LB">ASUS Zenbook UX303LB</option>
+			<option value="Dell XPS 15-9530 (Refurb">Dell XPS 15-9530 (Refurb</option>
+			<option value="Apple Macbook Pro Retina 13">Apple Macbook Pro Retina 13</option>
+			<option value="Asus Zenbook UX501JW">Asus Zenbook UX501JW</option>
+			<option value="Dell XPS 15-9550">Dell XPS 15-9550</option>
+			<option value="Apple Macbook Pro Retina 15">Apple Macbook Pro Retina 15</option>
+		</select>
+		<div id="submit-button-area">
+			<button type="submit" class="blue">Submit</button>
+		</div>
 	</form>
 </div>
 </body>
